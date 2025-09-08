@@ -11,14 +11,31 @@ a{
     text-decoration: none;
     color: white;
 }
+.header {
+  display: flex;
+  align-items: center;
 
+  padding: 10px;
+}
+
+.logo {
+  width: 50px; /* adjust width as per your logo size */
+  height: auto;
+  margin-right: 10px;
+}
+
+.company-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(250, 90, 32);
+}
 /* Navbar */
 .navbar {
   background-color: #ffffff !important;
 }
 .navbar-brand {
   font-weight: 700;
-  color: #d4af37 !important; /* Gold Logo */
+  color: orangered !important; /* Gold Logo */
   font-size: 1.4rem;
 }
 .nav-link {
@@ -27,7 +44,7 @@ a{
   transition: color 0.3s;
 }
 .nav-link:hover {
-  color:darkorange !important; /* Cyan hover */
+  color:orangered !important; /* orangered hover */
 }
 
 /* Hero Section */
@@ -35,7 +52,7 @@ a{
   position: relative;
   height: 100vh;
   overflow: hidden;
-
+ 
 }
 
 #bgVideo {
@@ -45,6 +62,7 @@ a{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0.80;
 }
 
 .hero-content {
@@ -52,11 +70,12 @@ a{
   z-index: 1;
   padding: 100px;
   color: #fba803;
+  align-items: center;
 }
 
 .btn-gold {
-  background-color: darkorange;
-  border-color: darkorange;
+  background-color: orangered;
+  border-color: orangered;
   color: #000;
 }
 
@@ -65,20 +84,7 @@ a{
   border-color: #ffc400;
 }
 
-/* Progressbar Section Headings */
-.background{
-    background-color: bisque;
-    border-radius: 15px;
-    padding: 25px;
-    margin-top: 9%;
-    margin-left: 25px;
-    margin-right: 25px;
-}
-.card:hover, .p-4:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  border: 1px solid #0dcaf0;
-}
+
 /* Section headings */
 section h2 {
   font-weight: 700;
@@ -102,12 +108,20 @@ section h2::after {
   border-radius: 15px;
   background: #ffffff;
   transition: transform 0.3s, box-shadow 0.3s;
+ 
 }
 .card:hover, .p-4:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   border: 1px solid #0dcaf0;
 }
+#why .p-4{
+   border-left: 5px solid #0dcaf0;
+}
+#why .loan-box{
+  box-align: center;
+}
+
 
 /* Process Steps */
 #process .border {
@@ -158,21 +172,101 @@ section h2::after {
   background: linear-gradient(90deg, #ffa94d, #0dcaf0);
   color: #fff;
 }
+/* FAQ */
+
+.faq-section {
+  padding: 50px 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+
+.accordion-button {
+  background-color: #fff;
+  color: #000;
+  padding: 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.accordion-button:hover {
+  background-color: #ddd;
+}
+
+.accordion-body {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+ 
+}
 
 /* Footer */
-footer {
-  background-color: #000000;
-  color: #ffffff;
+#footer {
+  font-size: small;
 }
-footer p {
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer-logo {
+  width: 55px;
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.social-media a:hover {
+  color: #ff4500;
+}
+
+.footer h5 {
+  margin-top: 0;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: orangered;
+}
+
+.contact-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
 }
 .about-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; 
 }
-
+#about .content-container{
+  text-align: left;
+}
+#about .img-fluid{
+  height: 350px;
+}
 .image-container {
   width: 50%;
 }
@@ -264,3 +358,77 @@ h5 {
   font-size: 16px;
   color: #666;
 }
+.card-body i {
+  margin-bottom: 20px;
+}
+
+.card-body h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  font-size: 16px;
+  color: #666;
+}
+
+.card {
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.loan-process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .step {
+    text-align: center;
+    width: 25%;
+    position: relative;
+  }
+
+  .step-number {
+    background-color: #ffd700;
+    color: #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    font-weight: bold;
+  }
+
+  .step h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .step p {
+    font-size: 16px;
+    color: #666;
+  }
+
+  .step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -25%;
+    width: 50%;
+    height: 2px;
+    background-color: #ddd;
+  }
+  .quick{
+   text-align: center;
+   
+  }
+  .important{
+    text-align: center;
+  }
