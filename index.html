@@ -351,6 +351,18 @@
               <input type="email" class="form-control" id="email" placeholder="Enter your email">
             </div>
             <div class="mb-3">
+              <label for="loan-type" class="form-label">Type of Loan</label>
+                <select class="form-control" id="loan-type">
+                  <option value="Personal Loan">Personal Loan</option>
+                  <option value="Business Loan">Business Loan</option>
+                  <option value="Housing Loan">Housing Loan</option>
+                  <option value="Property Loan">Property Loan</option>
+                  <option value="Vehicle Loan">Vehicle Loan</option>
+                  <option value="MSME Loan">MSME Loan</option>
+                  <option value="Balancesheet transfer & Topup">Balancesheet transfer & Topup</option>
+                </select>
+            </div>
+            <div class="mb-3">
               <label for="message" class="form-label">Message</label>
               <textarea class="form-control" id="message" rows="4" placeholder="Type your message"></textarea>
             </div>
@@ -410,6 +422,25 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Contact form message to Whatsapp script -->
+
+<script>
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const loanType = document.getElementById('loan-type').value;
+    const message = document.getElementById('message').value;
+
+    const whatsappNumber = '+917667924881'; 
+    const url = `https://wa.me/${whatsappNumber}?text=Lead%20from%20Website%0A%0AName:%20${name}%0AEmail:%20${email}%0AType%20of%20Loan:%20${loanType}%0AMessage:%20${message}`;
+
+    window.open(url, '_blank');
+  });
+</script>
 
 </body>
 </html>
