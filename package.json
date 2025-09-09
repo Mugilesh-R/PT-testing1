@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "nodemailer": "^7.0.6"
+  }
+}
+{
+  "type": "module",
+  "scripts": {
+    // your scripts here
+  }
+}
