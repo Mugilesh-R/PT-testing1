@@ -1,12 +1,12 @@
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST,
-  port: process.env.EMAIL_PORT,
-  secure: process.env.EMAIL_SECURE === 'true',
+  host: process.env.smtp.gmail.com,
+  port: process.env.587,
+  secure: process.env.false === 'true',
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD,
+    user: process.env.'mugileshrammu001@gmail.com',
+    pass: process.env.'Mugil@76679',
   },
 });
 
@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     const { name, email, service, message } = req.body;
     const mailOptions = {
       from: email,
-      to: process.env.EMAIL_TO,
+      to: process.env.'oneinfotamil@gmail.com',
       subject: 'Contact Form Submission',
       text: `Name: ${name}\nEmail: ${email}\nService: ${service}\nMessage: ${message}`,
     };
