@@ -1,3 +1,29 @@
+/* Add this to your CSS file */
+
+/* Desktop styles */
+@media (min-width: 992px) {
+  /* Your desktop styles here */
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Your tablet styles here */
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  /* Your mobile styles here */
+  .container {
+    padding: 20px;
+  }
+  .form-control {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 

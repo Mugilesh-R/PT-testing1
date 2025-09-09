@@ -366,20 +366,24 @@
     <label for="message" class="form-label">Message</label>
     <textarea class="form-control" id="message" rows="4" placeholder="Type your message"></textarea>
   </div>
-  <button type="submit" class="btn btn-primary">Send Message</button>
+  <button type="submit" class="btn btn-primary" onclick="sendData()">Send Message</button>
 </form>
 
 <script>
-  function sendToWhatsApp() {
+  function sendData() {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const service = document.getElementById("service").value;
     const message = document.getElementById("message").value.trim();
 
-    const number = "+917667924881"; // Replace with your WhatsApp number
-    const msg = `Lead from Website\n\n*Name:* ${name}\n*Email:* ${email}\n*Type of Loan:* ${service}\n*Message:* ${message}`;
-    window.open(`https://wa.me/${number}?text=${encodeURIComponent(msg)}`, '_blank');
-    return false;
+    const subject = "Lead from Website";
+    const body = `Name: ${name}\nEmail: ${email}\nType of Loan: ${service}\nMessage: ${message}`;
+
+    const whatsappNumber = "+917667924881"; // Replace with your WhatsApp number
+    const whatsappMsg = `Lead from Website\n\n*Name:* ${name}\n*Email:* ${email}\n*Type of Loan:* ${service}\n*Message:* ${message}`;
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`, '_blank');
+
+    window.location.href = `mailto:mugileshrammu001@gmail.com?subject=${subject}&body=${body}`;
   }
 </script>
         </div>
